@@ -11,11 +11,25 @@ public class Digits
     public Digits (int num)
     {
         //implemented in part (a)
+        digitList = new ArrayList<Integer>();
+        
+        if(num == 0)
+        {
+            digitList.add(num);
+        }
+        
+        while(num > 0)
+        {
+            int digit = num % 10;
+            digitList.add(0, digit);
+            num = num / 10;
+        }
     }
     public boolean isStrictlyIncreasing()
     {
         //implemented in part (b)
     }
+    
     //Extra method to make the runner easier to read
     public ArrayList<Integer> getDigitList()
     {
